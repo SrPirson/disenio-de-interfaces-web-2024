@@ -1,0 +1,89 @@
+/* RESETEO ESTILOS */
+* {
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    font-family: 'Arial Narrow Bold', sans-serif, Impact, ;
+}
+
+.container {
+    /* float: left; */
+    border: 1px solid black;
+}
+
+.container__layout {
+    /* float: left; */
+    display: flex;
+    /* flex-direction: row; /* Todo en la misma fila */
+    /* flex-wrap: wrap; /* Si no cabe en la fila lo mueve de linea */
+    flex-flow: row wrap; /* Intenta comprimirlo y dejarlo en una unica fila */
+    justify-content: space-between; /*  */
+    width: auto;
+    height: 500px;
+    align-items: center;
+    border: 1px solid black;
+}
+
+.layout__box {
+    /* float: left; */
+    font-size: 20px;
+    text-align: center;
+    padding: 20px;
+    border: 2px solid burlywood;
+    margin: 10px;
+    flex-grow: 1; /* Las cajas ocupan el espacio disponible */
+    min-width: 25%; /* Tamaño minimo de las cajas */
+}
+ 
+.layout__box--peru {
+    background-color: peru;
+    color: white;
+    flex-grow: 1; /* Estira como chicle */
+    align-self: flex-end;
+    order: 3; /* Cambiar el orden de las cajas */
+}
+
+.layout__box--purple {
+    background-color: purple;
+    color: white;
+    order: 2; 
+}
+
+.layout__box--pink {
+    background-color: pink;
+    color: black;
+    flex-grow: 2;
+    align-self: flex-start;
+    order: 1; 
+    flex-basis: calc((100% / 3) + 20px); /* Es igual que el width, fuerza el tamaño de una caja */
+}
+
+.layout__box--peach {
+    background-color: peachpuff;
+    color: black;
+    flex-grow: 1;
+    order: 6;
+}
+
+.layout__box--brown {
+    background-color: brown;
+    color: white;
+    flex-grow: 1.1;
+    order: 4;
+}
+
+.layout__box--salmon {
+    
+    background-color: salmon;
+    color: white;
+    flex-grow: 1;
+    align-self: flex-end;
+    order: 5;
+}
+
+/* RESETEAR LOS FLOAT */
+/* Se aplica a los que no queremos que estén flotados */
+.clearfix {
+    float: none;
+    clear: both;
+}
