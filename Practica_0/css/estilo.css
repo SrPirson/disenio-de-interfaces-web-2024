@@ -1,0 +1,213 @@
+* {
+    background-color: rgb(197, 172, 139);
+    color:rgb(100, 79, 50);
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+p{
+    font-size: 20px;
+}
+
+hr {
+    background-color: rgb(100, 79, 50);
+    border: none;
+    height: 3px;
+}
+
+.inicio {
+    text-align: center;
+    padding-top: 80px;
+}
+
+.titulo {
+    text-align: center;
+}
+
+/* CSS NAV */
+
+.menu ul {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(100, 79, 50);
+    list-style-type: none;
+    position: fixed;
+    width: 99%;
+}
+  
+.menu ul li {
+    float: left;
+}
+  
+.menu ul li a {
+    display: block;
+    text-align: center;
+    color:rgb(190, 179, 163);
+    padding: 20px 40px 20px;
+    background-color: rgb(100, 79, 50);
+    text-decoration: none;
+    
+}
+
+.menu ul li img {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(100, 79, 50);
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-right: 3px;
+}
+
+.menu ul li a:hover {
+    background-color: rgb(117, 103, 83);
+}
+
+/* CSS SOBRE MI */
+
+.sobre-mi{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.sobre-mi article{
+    display: flex;
+    padding-left: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.sobre-mi img {
+    width: 250px;
+    height: 300px;
+    border-radius: 20%;
+    padding-right: 15px;
+    background-color: transparent;
+
+}
+
+.sobre-mi .info{
+    width: 40%;
+    padding-right: 30px;
+}
+
+.map-medac{
+    width: 59%;
+}
+
+/* CSS AFICIONES */
+
+.aficion {
+    padding-left: 2%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 98%;
+}
+
+/* CSS CIUDADES */
+
+.ciudades {
+    padding-left: 2%;
+    width: 99%;
+}
+
+.ciudades .pais{
+    display: flex;
+    width: 100%;
+}
+
+.ciudades div div {
+    padding-top: 50px;
+    padding-left: 60px;
+}
+
+.ciudades div div ul{
+    padding-left: 32px;
+}
+
+.ciudades .nl{
+    padding-left: 0px;
+}
+
+/* CSS GALERIA */
+
+.galeria{
+    display: flex;
+    justify-content: space-between;
+    width: 98%;
+    height: 505px;
+}
+
+.galeria img{
+    width: 100px;
+    flex-grow: 1;
+    object-fit: contain;
+    opacity: .6;
+    transition: all 0.5s ease;
+    height: 100%;
+    background-color: transparent;
+}
+
+.galeria img:hover{
+    width: 300px;
+    opacity: 1;
+    filter: contrast(120%);
+    border-radius: 30%;
+}
+
+/* CSS ACTIVIDADES */
+
+.actividades {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 60px;
+}
+
+.actividades table {
+    width: 80%;
+    text-align: center;
+    box-shadow: 1px 5px 20px 1px rgb(66, 52, 33);
+}
+
+.actividades caption {
+    background-color: transparent;
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+.actividades th {
+    padding: 10px;
+    background-color: rgb(100, 79, 50);
+    color: rgb(190, 179, 163);
+}
+
+.actividades td {
+    padding: 10px;
+    background-color: rgb(197, 172, 139);
+    color: rgb(100, 79, 50);
+}
+
+/* CSS FOOTER */
+footer {
+    display: flex;
+    background-color: rgb(100, 79, 50);
+    padding-left: 10px;
+}
+
+footer p {
+    width: 95%;
+    background-color: transparent;
+    color: #c5ad4c;
+}
+
+footer a {
+    background-color: transparent;
+}
+footer img {
+    padding-top: 10px;
+    background-color: rgb(100, 79, 50);
+    width: 40px;
+    padding-left: 150px;
+    padding-right: 10px;
+}

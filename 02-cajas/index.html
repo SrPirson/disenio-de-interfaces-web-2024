@@ -1,0 +1,226 @@
+<!--  
+Ejercicio Resumen - Cajas / Animaciones y Transiciones
+    1.- Crear estructura html que cuente con un Contenedor General, cabecera, menú, 
+    barra lateral, sección de contenido principal, elementos dentro del contenedor 
+    principal y footer 
+    2.- Todo el contenido debe estar dentro del contenedor general y su ancho será 
+    de 1200px
+    3.- Header debe ocupar el 100% del ancho y tener un texto grande.
+    4.- Menú debe tener los elementos uno al lado del otro. Debe disponer de un menú desplegable en diversos elementos.
+    5.- El contenido principal debe tener un ancho del 70%. 
+    6.- El contenido dentro del contenedor principal debe ser una cuadrícula
+    con cuatro líneas de 2 cajas.
+    7.- La barra lateral debe tener un ancho del 30%
+    8.- El footer debe tener un ancho del 100% y estar al final del todo.
+
+Aspectos adicionales:
+    - Caja Libre 1 y 2 (repasar z-index)
+    - Caja Fija a la izquierda
+    - Animaciones y Transiciones (formulario y caja) 
+-->
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicios de Cajas</title>
+    <!-- ESTILOS -->
+    <link rel="stylesheet" href="./css/estilos.css" />
+  </head>
+  <body>
+    <!-- PRINCIPAL -->
+    <main class="container">
+      <!-- CABECERA -->
+      <header class="header">
+        <h1 class="header__title">Modelo de Cajas - Sesión 1</h1>
+        <h2 class="header__subtitle">CSS</h2>
+      </header>
+      <!-- BARRA DE NAVEGACIÓN -->
+      <nav class="navbar">
+        <ul class="navbar__list">
+          <li class="list__item">
+            <a href="#">Inicio</a>
+          </li>
+          <li class="list__item">
+            <a href="#">Contenido</a>
+            <ul class="item__sublist">
+              <li class="sublist__item">Peliculas</li>
+              <li class="sublist__item">Juegos</li>
+            </ul>
+          </li>
+          <li class="list__item">
+            <a href="#">Blog</a>
+          </li>
+          <li class="list__item">
+            <a href="#">Contacto</a>
+            <ul class="item__sublist">
+              <li class="sublist__item">Peliculas</li>
+              <li class="sublist__item">Juegos</li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+
+      <section class="content">
+        <h1 class="content__item">Contenido Principal</h1>
+        <div class="content__box content__box--3d">
+          <p class="box__info">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio
+            magnam accusantium laudantium minima excepturi sit dignissimos
+            quisquam dicta ut, enim fugiat ea hic facilis repellendus voluptatem
+            magni architecto praesentium dolor officia eveniet. Porro modi dolor
+            delectus? Minus mollitia, voluptas velit vero ipsam facere, odit
+            magni explicabo qui, aperiam maiores. Reprehenderit!
+          </p>
+        </div>
+        <div class="content__box content__box--3d">
+          <p class="box__info">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio
+            magnam accusantium laudantium minima excepturi sit dignissimos
+            quisquam dicta ut, enim fugiat ea hic facilis repellendus voluptatem
+            magni architecto praesentium dolor officia eveniet. Porro modi dolor
+            delectus? Minus mollitia, voluptas velit vero ipsam facere, odit
+            magni explicabo qui, aperiam maiores. Reprehenderit!
+          </p>
+        </div>
+        <div class="content__box content__box--sombriteMultiple">
+          <p class="box__info">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio
+            magnam accusantium laudantium minima excepturi sit dignissimos
+            quisquam dicta ut, enim fugiat ea hic facilis repellendus voluptatem
+            magni architecto praesentium dolor officia eveniet. Porro modi dolor
+            delectus? Minus mollitia, voluptas velit vero ipsam facere, odit
+            magni explicabo qui, aperiam maiores. Reprehenderit!
+          </p>
+        </div>
+        <div class="content__box content__box--sombriteMultiple">
+          <p class="box__info">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio
+            magnam accusantium laudantium minima excepturi sit dignissimos
+            quisquam dicta ut, enim fugiat ea hic facilis repellendus voluptatem
+            magni architecto praesentium dolor officia eveniet. Porro modi dolor
+            delectus? Minus mollitia, voluptas velit vero ipsam facere, odit
+            magni explicabo qui, aperiam maiores. Reprehenderit!
+          </p>
+        </div>
+        <div class="content__box">
+          <p class="box__info">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio
+            magnam accusantium laudantium minima excepturi sit dignissimos
+            quisquam dicta ut, enim fugiat ea hic facilis repellendus voluptatem
+            magni architecto praesentium dolor officia eveniet. Porro modi dolor
+            delectus? Minus mollitia, voluptas velit vero ipsam facere, odit
+            magni explicabo qui, aperiam maiores. Reprehenderit!
+          </p>
+        </div>
+        <div class="content__box">
+          <p class="box__info">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio
+            magnam accusantium laudantium minima excepturi sit dignissimos
+            quisquam dicta ut, enim fugiat ea hic facilis repellendus voluptatem
+            magni architecto praesentium dolor officia eveniet. Porro modi dolor
+            delectus? Minus mollitia, voluptas velit vero ipsam facere, odit
+            magni explicabo qui, aperiam maiores. Reprehenderit!
+          </p>
+        </div>
+        <div class="content__box content__box--sombrite">
+          <p class="box__info">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio
+            magnam accusantium laudantium minima excepturi sit dignissimos
+            quisquam dicta ut, enim fugiat ea hic facilis repellendus voluptatem
+            magni architecto praesentium dolor officia eveniet. Porro modi dolor
+            delectus? Minus mollitia, voluptas velit vero ipsam facere, odit
+            magni explicabo qui, aperiam maiores. Reprehenderit!
+          </p>
+        </div>
+        <div class="content__box content__box--sombrite">
+          <p class="box__info">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio
+            magnam accusantium laudantium minima excepturi sit dignissimos
+            quisquam dicta ut, enim fugiat ea hic facilis repellendus voluptatem
+            magni architecto praesentium dolor officia eveniet. Porro modi dolor
+            delectus? Minus mollitia, voluptas velit vero ipsam facere, odit
+            magni explicabo qui, aperiam maiores. Reprehenderit!
+          </p>
+        </div>
+        <div class="content__box content__box--redondo">
+          <p class="box__info">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio
+            magnam accusantium laudantium minima excepturi sit dignissimos
+            quisquam dicta ut, enim fugiat ea hic facilis repellendus voluptatem
+            magni architecto praesentium dolor officia eveniet. Porro modi dolor
+            delectus? Minus mollitia, voluptas velit vero ipsam facere, odit
+            magni explicabo qui, aperiam maiores. Reprehenderit!
+          </p>
+        </div>
+        <div class="content__box content__box--redondo">
+          <p class="box__info">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt
+            dolorem voluptates, odit libero fugiat suscipit dolores magnam nemo
+            porro eaque accusamus maxime distinctio beatae quasi mollitia quod,
+            deleniti quam. Qui perferendis eius nobis similique necessitatibus
+            beatae quo, aperiam nemo incidunt illum minus. Facilis libero
+            asperiores ipsa ab voluptate earum culpa.
+          </p>
+        </div>
+      </section>
+
+      <aside class="aside">
+        <div class="aside__box">
+          <h2 class="box__title">Caja Lateral 1</h2>
+          <p class="box_text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae eius
+            quia labore laboriosam repellendus magni expedita itaque! Error
+            mollitia tempora, dolorem quasi saepe, harum assumenda debitis sequi
+            cumque eaque, dignissimos animi beatae in rem explicabo. Totam
+            recusandae ut amet porro quos perferendis laboriosam culpa.
+            Dignissimos quis fugit accusamus magnam doloremque?
+          </p>
+          <p class="box_text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae eius
+            quia labore laboriosam repellendus magni expedita itaque! Error
+            mollitia tempora, dolorem quasi saepe, harum assumenda debitis sequi
+            cumque eaque, dignissimos animi beatae in rem explicabo. Totam
+            recusandae ut amet porro quos perferendis laboriosam culpa.
+            Dignissimos quis fugit accusamus magnam doloremque?
+          </p>
+          <p class="box_text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae eius
+            quia labore laboriosam repellendus magni expedita itaque! Error
+            mollitia tempora, dolorem quasi saepe, harum assumenda debitis sequi
+            cumque eaque, dignissimos animi beatae in rem explicabo. Totam
+            recusandae ut amet porro quos perferendis laboriosam culpa.
+            Dignissimos quis fugit accusamus magnam doloremque?
+          </p>
+          <p class="box_text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae eius
+            quia labore laboriosam repellendus magni expedita itaque! Error
+            mollitia tempora, dolorem quasi saepe, harum assumenda debitis sequi
+            cumque eaque, dignissimos animi beatae in rem explicabo. Totam
+            recusandae ut amet porro quos perferendis laboriosam culpa.
+            Dignissimos quis fugit accusamus magnam doloremque?
+          </p>
+        </div>
+      </aside>
+      <div class="box__free box__free1">Caja LIBRE1</div>
+      <div class="box__free box__free2">Caja LIBRE2</div>
+      <div class="box__static">Caja Static</div>
+
+      <footer class="footer">
+        Todos los derechos reservados &copy; Francisco Cortés Pirson
+      </footer>
+    </main>
+
+    <!-- Primeras iteraciones -->
+    <p class="transformed">Girando</p>
+    <div class="box__animated">Soy una Caja</div>
+    <section class="box__container2">
+      CAJA CONTENEDORA
+      <div class="box__free box__free3">Caja LIBRE3</div>
+      <div class="box__free box__free4">Caja LIBRE4</div>
+    </section>
+
+  </body>
+</html>
+
