@@ -15,7 +15,8 @@
 }
 .container__header{
     /* Añadir aquí Flex y Align y/o justify */
-
+    display: flex;
+    align-items: center;
 
     height: 120px;
     border-bottom: 1px solid rgba(226,225,226, 0.8);    
@@ -23,7 +24,8 @@
 
 .container__logo{
     /* Añadir aquí Flex */
-    
+    flex-grow: 1;
+
     padding: 10px;
     margin-left: 20px;
     color: black;
@@ -41,13 +43,14 @@
 
 .header__menu{
     /* Añadir aquí Flex */
-
-
+    margin-right: 27px;
     height: 100%;
 }
 .menu__list{
     /* Añadir aquí Flex y Align y/o justify */
-
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 
     height: 100%;
     list-style: none;
@@ -71,19 +74,23 @@
 /* contenido */
 .content{
     /* Añadir aquí Flex y Align y/o justify */
-
+    display: flex;
+    align-items: start;
+    
 
     margin-top: 20px;
     margin-bottom: 20px;
 }
 .content__projects{
     /* Añadir aquí Flex y Align y/o justify */
-
+    display: flex;
+    flex-flow: wrap;
+    
 
 }
 .projects__project{
     /* Añadir aquí Flex */
-
+    flex-basis: 23.5%;
 
     margin-bottom: 25px;
     margin-right: 20px;
@@ -119,8 +126,8 @@
 /* barra lateral */
 .content__lateral{
     /* Añadir aquí Flex */
-
-
+    flex-basis: 20%;
+    
     margin-right: 30px;
     padding: 15px;
 }
@@ -166,6 +173,10 @@
 /* Footer */
 .content__footer{
     /* Añadir aquí Flex y Align y/o justify */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
 
 
     height: 120px;
@@ -173,7 +184,7 @@
 }
 .footer__logoFooter{
     /* Añadir aquí Flex y order */
-
+    order: 2;
 
     padding: 10px;
     margin-left: 20px;
@@ -191,6 +202,7 @@
 
 .footer__info{
     /* Añadir aquí Flex y Order */
+    order: 1;
 
     opacity: 0.7;
     margin-left: 20px;
