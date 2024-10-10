@@ -1,0 +1,86 @@
+/* RESETEO ESTILOS */
+* {
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    font-family: 'Arial Narrow Bold', sans-serif, Impact, ;
+}
+
+body {
+    text-align: center;
+}
+
+.container {
+    border: 1px solid black;
+    width: 80%;
+    margin: 0 auto; /* Centra perfectamente el contenedor */
+}
+
+.container__layout {
+
+}
+
+.layout__box {
+    font-size: 20px;
+    padding: 20px;
+    border: 1px solid black;
+    margin: 10px;
+}
+ 
+.layout__box--peru {
+    background-color: peru;
+    color: white;
+}
+
+.layout__box--purple {
+    background-color: purple;
+    color: white;
+}
+
+.layout__box--pink {
+    background-color: pink;
+    color: white;
+}
+
+.layout__box--peach {
+    background-color: peachpuff;
+    color: white;
+}
+
+.layout__box--brown {
+    background-color: brown;
+    color: white;
+}
+
+.layout__box--salmon {
+    background-color: salmon;
+    color: white;
+}
+
+.layout__box--hotpink {
+    background-color:hotpink;
+    color: white;
+}
+
+.layout__box--turquoise {
+    background-color:mediumturquoise;
+    color: white;
+}
+
+.layout__box--lollipop {
+    background-color:#F7638C;
+    color: white;
+}
+
+.layout__box--olive {
+    background-color:olive;
+    color: white;
+}
+
+
+/* RESETEAR LOS FLOAT */
+/* Se aplica a los que no queremos que estén flotados */
+.clearfix {
+    float: none;
+    clear: both;
+}
