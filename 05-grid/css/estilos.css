@@ -17,7 +17,17 @@ body {
 }
 
 .container__layout {
+    display: grid;
 
+    /* Divide el espacio en fracciones de las columnas */
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    /* grid-template-columns: repeat(4, 1fr); */
+
+    /* grid-template-columns: calc(50% - 10px) calc(25% - 10px) calc(25% - 10px); */
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    /* Divide el espacio en fracciones de las filas */
+    grid-template-rows: 1fr 1fr 1fr 1fr;
 }
 
 .layout__box {
@@ -30,6 +40,10 @@ body {
 .layout__box--peru {
     background-color: peru;
     color: white;
+
+    /* Desde la columa que indiquemos hasta donde indiquemos amplia esa caja */
+    grid-column-start: 1;
+    grid-column-end: 3;
 }
 
 .layout__box--purple {
@@ -70,11 +84,16 @@ body {
 .layout__box--lollipop {
     background-color:#F7638C;
     color: white;
+    /* grid-row: 3 / 4; */
 }
 
 .layout__box--olive {
     background-color:olive;
     color: white;
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 5;
 }
 
 
