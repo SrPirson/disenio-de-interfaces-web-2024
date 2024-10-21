@@ -6,7 +6,16 @@
 body{
     font-family: sans-serif;
     text-align: center;
+    background: #ffdced;
+    
 }
+
+/* ::-webkit-scrollbar{
+    height: 10px;
+    background: #84563C;
+    width: 50px;
+    border-radius: 10%;
+} */
 
 /* 
 Maquetación
@@ -20,8 +29,74 @@ Maquetación
 
 .website{
     display: grid;
-    grid-template-columns: 8fr 2fr;
+    /* grid-template-columns: 80% 20%; */
+    /* grid-template-columns: 8fr 2fr; */
+    grid-template-columns: 4fr 2fr;
     grid-template-rows: 120px 70px 2fr 70px;
 
-    
+    /* Defino las filas de arriba */
+    grid-template-areas: 
+        "cabecera cabecera" /* 120px - CABECERA (arriba del todo y que ocupe el 100%) */
+        "menu menu" /* 70px - MENÚ (debajo de la cabecera y que ocupe el 100%) */
+        "contenido lateral"
+        "footer footer";
+
+    width: 98%;
+    height:100vh; /* Es como el 100% de la altura del navegador pero amplia*/
+    margin: 0 auto; /* Para centrar y se auto posicione */
+    border: 1px solid black;
+}
+
+.website__header{
+    grid-area: cabecera;
+    align-content: center; /* Centrar el contenido al centro de la caja */
+    background-color: rgb(240, 136, 171);
+    color: whitesmoke;
+}
+
+.website__menu{
+    grid-area: menu;
+    background-color: papayawhip;
+    color: whitesmoke;
+    line-height: 70px;
+}
+
+.menu__list{
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    list-style: none; /* Para quitarle los puntos a una lista */   
+}
+
+.list__item{
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 18px;
+}
+
+.website__content{
+    grid-area: contenido;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 20px;
+    grid-gap: 25px;
+}
+
+.content__article {
+    border-radius: 30px;
+    background: linear-gradient(145deg, #e6c6d5, #ffebfe);
+    box-shadow:  20px 20px 60px #d9bbc9,
+                 -20px -20px 60px #fffdff;
+    color: black;
+}
+
+.website__sidebar{
+    grid-area: lateral;
+    background-color: #84563C;
+    color: white;
+}
+
+.website__footer{
+    grid-area: footer;
+    background-color: rgb(240, 136, 171);
+    color: whitesmoke;
 }
