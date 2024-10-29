@@ -213,8 +213,8 @@ No es necesario flotar los elementos (ni con float, flex, grid, grid-areas */
 .submenu__item:hover::before{
     width: 70%;
     opacity: 1;
-
 }
+
 
 /* Estilos para el Banner */
 .layout__banner{
@@ -237,10 +237,10 @@ No es necesario flotar los elementos (ni con float, flex, grid, grid-areas */
     /* position */
     position: relative;
     display: inline-block; /* Para que se muevan en bloque */
-
+    
     width: 50%;
     padding: 0 1.5rem;
-    z-index: 3;
+    z-index: 6;
 }
 .banner__title{
     font-size: 8rem;
@@ -270,44 +270,143 @@ No es necesario flotar los elementos (ni con float, flex, grid, grid-areas */
 
 .shapes__item{
     /* position y z-index */
-    
+    position: absolute;
+    z-index: 5;
+
     pointer-events: none;
 }
 .shapes__item--shape1{
     /* position y animación */
+
+    /* Ubicación de la imagen en el padre */
+    top: 0; 
+    right: 0;
+    animation-name: muestraDesdeDerecha; /* Nombre de la animacion */
+    animation-duration: 5s; /* Tiempo de la animacion */
+}
+/* Animacion para la imagen de arriba */
+@keyframes muestraDesdeDerecha{
+    from{
+        transform: translateX(100%);
+    } to {
+        transform: translateX(0px);
+    }
 }
 
 .shapes__item--shape2{
     /* position y animación */
+
+    /* Ubicación de la imagen en el padre */
+    bottom: 0;
+    left: 0;
+    z-index: 4;
+    animation-name: muestraDesdeIzquierda; /* Nombre de la animacion */
+    animation-duration: 5s; /* Tiempo de la animacion */
+}
+@keyframes muestraDesdeIzquierda{
+    from{
+        transform: translateX(-100%);
+    } to {
+        transform: translateX(0px);
+    }
 }
 
 .shapes__item--shape3{
     /* position y animación */
+    top: 50%;
+    right: 50%;
+    z-index: 4;
+    /* Animación infinita */
+    animation: mueveShape3 20s infinite linear;
+}
+@keyframes mueveShape3 {
+    0% {
+        transform: translateX(0%) translateY(0%) perspective(500px) translateZ(-100px);
+    } 33% {
+        transform: translateX(50px) translateY(-200px) perspective(500px) translateZ(-500px);
+    } 66% {
+        transform: translateX(800px) translateY(100px) perspective(500px) translateZ(-1000px);
+    } 100% {
+        transform: translateX(0%) translateY(0%) translateZ(0%);
+    }
 }
 
 .shapes__item--shape4{
     /* position y animación */
+    bottom: 5%;
+    left: 5%;
+    z-index: 4;
+    animation: mueveShape4 20s infinite linear;
 }
 .shapes__item--shape4 .shapes__img{
     opacity: 0.5;
     width: 7.5rem;
 }
 
+@keyframes mueveShape4 {
+    0% {
+        transform: translateX(0%) translateY(0%) perspective(0) translateZ(100%);
+    } 33% {
+        transform: translateX(50px) translateY(-200px) perspective(500px) translateZ(-500px);
+    } 66% {
+        transform: translateX(800px) translateY(-100px) perspective(500px) translateZ(-100px);
+    } 85% {
+        transform: translateX(400px) translateY(-50px) perspective(500px) translateZ(-60px);
+    } 100% {
+        transform: translateX(0%) translateY(0%) perspective(500px) translateZ(100%);
+    }
+}
 
 .shapes__item--shape5{
     /* position y animación */
+    top: 5%;
+    left: 15%;
+    z-index: 4;
+    animation: mueveShape5 20s infinite linear;
 }
+
+/* @keyframes mueveShape5 {
+    0% {
+        transform: translateX(0%) translateY(0%) perspective(0) translateZ(100%);
+    } 33% {
+        transform: translateX(50px) translateY(-200px) perspective(500px) translateZ(-500px);
+    } 66% {
+        transform: translateX(800px) translateY(-100px) perspective(500px) translateZ(-100px);
+    } 85% {
+        transform: translateX(400px) translateY(-50px) perspective(500px) translateZ(-60px);
+    } 100% {
+        transform: translateX(0%) translateY(0%) perspective(500px) translateZ(100%);
+    }
+} */
 
 .shapes__item--shape6{
     /* position y animación */
 }
+
+
 .shapes__item--shape7{
     /* position y animación */
+
+    /* Ubicación de la imagen en el padre */
+    z-index: 3;
+    top: 0; 
+    right: 5.5%;
+    animation-name: muestraDesdeArriba; /* Nombre de la animacion */
+    animation-duration: 5s; /* Tiempo de la animacion */
+}
+@keyframes muestraDesdeArriba{
+    from{
+        transform: translateY(-100%);
+    } to {
+        transform: translateY(0%);
+    }
 }
 
 /* Estilos sección Servicios */
 .layout__services{
     /* position y z-index */
+    position: relative;
+    z-index: 1;
 
     margin: 14rem 10rem;
     margin-bottom: 4rem;
@@ -343,14 +442,18 @@ No es necesario flotar los elementos (ni con float, flex, grid, grid-areas */
     color: var(--color-title);
 }
 .services__list{
-    /* flex */
+    /* grid */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 
     gap: 3rem; /* separación entre los elementos */
 }
 .services__service{
-    /* flex */
+    /* grid */
+    display: grid;
+    grid-template-columns: 1fr 2.5fr;
 
-    height: 100%;
+    height: 56%;
     padding: 5rem 4rem;
     margin-bottom: 4rem;
     border-radius: 3rem;
@@ -359,14 +462,22 @@ No es necesario flotar los elementos (ni con float, flex, grid, grid-areas */
     border: 1px solid;
     border-image-source: linear-gradient(90deg, var(--color-bg-services), rgba(255,255,255,0));
     /* efecto */
-
+    transition: all 250ms linear;
 }
-
+.services__service:hover{
+    background-color: var(--color-borders);
+}
 .service__container-img{
     margin-right: 2.5rem;
     max-width: 8.5rem;
-    /* Relacionado con flex grow y flex basis */
+    /* Relacionado con flex grow y flex basis (nos lo ahorramos con grid)*/
+    transition: all 1000ms ease-in-out;
 }
+
+.service__container-img:hover .service__img{
+    transform: scale(1.1);
+}
+
 .service__content{
     /* Relacionado con flex grow y flex basis */
 }
@@ -377,6 +488,7 @@ No es necesario flotar los elementos (ni con float, flex, grid, grid-areas */
     line-height: 1.4;
     margin-bottom: 3rem;
     /* efecto */
+    transition: all 500ms linear;
 }
 .service__description{
     overflow: hidden;
@@ -385,29 +497,46 @@ No es necesario flotar los elementos (ni con float, flex, grid, grid-areas */
 }
 .service__more{
     /* position */
+    position: relative;
 
     font-weight: 500;
     font-size: 1.7rem;
     padding-left: 5rem;
     /* efecto */
+    transition: all 500ms linear;
 }
 
 /* pseudoelemento before */
+
+.service__more::before{
+    content: "";
+    position: absolute;
+    height: 0.2rem;
+    background-color: var(--color-text-body);
+    width: 15%;
+    opacity: 1;
+    /* Posición */
+    left: 0;
+    top: 50%;
+    transition: all 250ms linear;
+}
+
+.service__more:hover::before{
+    background-color: var(--color-primary);
+}
+
 
 .service__more:hover,
 .service__title:hover{
     color: var(--color-primary);
 }
-.service__more:hover::before{
-    color: var(--color-primary);
-}
 
 /* para generar el escalonado de las tarjetas de servicios */
 .services__service--bottom{
-    
+    margin-top: 200px;
 }
 .services__service--middle{
-    
+    margin-top: 100px;
 }
 .services__service--top{
     
@@ -416,20 +545,35 @@ No es necesario flotar los elementos (ni con float, flex, grid, grid-areas */
 /* coloco a las formas detrás de los servicios */
 .service-shapes__item{
     /* position y z-index */
+    position: absolute;
+    z-index: -1;
 
     pointer-events: none;
 }
 .service-shapes--shape1{
     /* position */
+    right: 25%;
+    top: -10%;
 }
 .service-shapes--shape2{
     /* position */
     opacity: 0.6;
+    right: 30%;
+    top: -3%;
 }
 .service-shapes--shape3{
     /* position y animación */
-
+    right: 30%;
+    top: 30%;
+    animation-name: rotacionTierra; /* Nombre de la animacion */
+    animation: rotacionTierra 10s infinite linear;
 }
+@keyframes rotacionTierra{
+    100% {
+        transform: rotate(360deg) translateX(300px) rotate(-360deg) translateX(-300px);
+    }
+}
+
 
 /* Estilos para la sección de Proyectos */
 .layout__projects{
