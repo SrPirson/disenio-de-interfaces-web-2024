@@ -235,12 +235,15 @@ body{
     margin-top: 40px;
     cursor: pointer;
     /* transicion */
-
+    transition: all 500ms;
 }
+
 /*efecto hover en las cartas */
+.cards__card:hover {
+    background-color: var(--color-bg)
+}
 
-
-.cards__card:last-child{
+.cards__card:last-child {
     margin-right: 0px;
 }
 
@@ -254,8 +257,19 @@ body{
     margin: 0px auto;
 }
 /*efecto hover en la carta modificamos card__icon */
+.cards__card:hover .card__icon{
+    color: var(--color-primary);
+    animation: muestraIcono 500ms linear;
+}
 
 /* keyframes */
+@keyframes muestraIcono {
+    from {
+        transform: translateY(-200%);
+    } to {
+        transform: translateY(0);
+    }
+}
 
 .card__category{
     width: 100%;
@@ -264,10 +278,22 @@ body{
     font-size: 21px;
     font-weight: bold;
     text-align: center;
-    color: var(--color-text-title);
+    color: var(--color-primary);
     transition: all 500ms;
 }
 /*efecto hover en la carta - modificamos card_category */
+.cards__card:hover .card__category{
+    color: var(--color-primary);
+    animation: muestraCabecera 550ms linear;
+}
+@keyframes muestraCabecera {
+    from {
+        transform: translateY(-300%);
+    } to {
+        transform: translateY(0);
+    }
+}
+
 
 .card__description{
     font-family: "TrebuchetMS";
@@ -275,9 +301,43 @@ body{
     color: var(--color-text-title);
     font-size: 14px;
     /* transición */
+    transition: all 500ms;
+    visibility: hidden;
 }
-/* efecto de hover en la carta. tocamos card__description */
 
+.card__description1, .card__description2, .card__description3, .card__description4, .card__description5{
+    font-family: "TrebuchetMS";
+    text-align: center;
+    color: var(--color-text-title);
+    font-size: 14px;
+    /* transición */
+    transition: all 500ms;
+    visibility: visible;
+}
+.card__description1 {
+    position:relative;
+    bottom: 10px;
+}
+.card__description2 {
+    position:relative;
+    top: 33px;
+}
+
+/* TERMINAR ESTO DE ARRIBA */
+
+/* efecto de hover en la carta. tocamos card__description */
+.cards__card:hover .card__description{
+    color: var(--color-primary);
+    animation: muestraDescripcion 550ms linear;
+    visibility: visible;
+}
+@keyframes muestraDescripcion {
+    from {
+        transform: perspective(0px) translateZ(-10px);
+    } to {
+        transform: perspective(0px) translateZ(0px);
+    }
+}
 
 .clearfix{
     float: none;
@@ -330,8 +390,12 @@ body{
     background-color: transparent;
     color: var(--color-backgroung);
     /* transición para el focus */
+    transition: all 500ms;
 }
 /* obtengo foco en input[type="text"] */
+.lateral__search input[type="text"]:focus {
+    color: var(--color-primary);
+}
 
 
 .lateral__search input[type="button"],
@@ -461,9 +525,14 @@ body{
     transform: translateX(-80%); /*lo desplazo para que cuando se lance el hover se vea el movimiento de la traslación*/
     opacity: 0; /*lo oculto*/
     /* transición el cambio */
+    transition: all 500ms;
 
 }
 /* efecto hover sobre el div de lateral__social */
+.lateral__social div:hover .social__overlay { 
+    opacity: 1;
+    transform: translateX(0%);
+}
 
 
 /* Artículos */
@@ -577,6 +646,7 @@ body{
     text-decoration: none;
     color: var(--color-primary);
     /* transición */
+    transition: all 500ms;
 
 }
 .footer__title{
@@ -606,8 +676,14 @@ body{
     display: block;
     height: 40px;
     /* transición */
+    transition: all 500ms;
 }
 /* efecto de hover sobre cada li */
+.footer__list li:hover a{
+    transform: translateX(15%);
+    color: var(--color-text-white);
+    scale: 1.1;
+}
 
 
 .content__footer iframe{
