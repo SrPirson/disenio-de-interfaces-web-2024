@@ -29,17 +29,20 @@
  definimos familia de fuente que voy a utilizar */
 :root{
     --mx-width: 1240px;
-    --color-primary: #e93737;
-    --color-secondary: #fff;
-    --color-backgroung: #ccc;
-    --color-bg: black;
-    --color-text-white: white;
-    --color-text-title: #00538c;
+    --color-white: white;
+    --color-black: black;
     --color-grey: gray;
-    --color-box-shadow: #ddd;
-    --color-box-shadow2: #393d3f;
-    --color-focus: #555;
-    --color-nav: #f09b9b;
+
+    --color-primary: #2E8BC0; /* Turquesa Marino para acentos y detalles */
+    --color-secondary: #003366; /* Azul Marino Profundo para fondos y cabeceras */
+    --color-background: #F3F4F6; /* Blanco Espuma para fondos */
+    --color-background2: #D1D9E6; /* Azul grisáceo suave */
+    --color-footer: #2F4552;
+    --color-text-title: #003366; /* Azul Marino Profundo para títulos */
+    --color-box-shadow: rgba(0, 51, 102, 0.2); /* Sombra suave en azul marino */
+    --color-box-shadow2: rgba(46, 139, 192, 0.3); /* Sombra suave en turquesa */
+    --color-focus: #FF6F61; /* Rojo Coral para resaltar y llamadas a la acción */
+    --color-nav: #F5E6CC; /* Beige Arena para fondo del menú de navegación */
 }
 
 /* Estilos Generales */
@@ -51,7 +54,7 @@ html{
     overflow-x: hidden;
 }
 body{
-    background: url("../img/pattern.png");
+    background: url("../img/pattern.jpg");
 }
 /* wrap queremos que los elementos "hijos" dispongan de estos estilos */
 .header__wrap, .content__wrap, .footer__wrap{
@@ -65,25 +68,26 @@ body{
     grid-template-columns: repeat(2, 1fr);
 }
 
-.logo__gear, .card__icon, .search__icon, .aside-box__icon, .social__icon{
+.logo__gear, .card__icon, .aside-box__icon, .social__icon{
     font-family: "WebSymbolsRegular";
 }
 
 /* Cabecera */
 .header{
     width: 100%;
-    height: 70px;
-    background-color: #6d4747;
+    height: 90px;
+    background: linear-gradient(to bottom, var(--color-nav) 0%, var(--color-background) 90%);
+    /* background-color: var(--color-nav); */
     font-family: "BebasNeue";
     color: var(--color-text-white);
     box-shadow: 3px 3px 10px var(--color-box-shadow2);
+    margin-bottom: 40px;
 }
 
 .header__logo{
-    width: 70px;
-    height: 70px;
-    margin-top: 3px;
+    width: 15.5%;
     margin-left: 25px;
+    filter: drop-shadow(0 2px 4px var(--color-box-shadow2));
 }
 
 .header__menu{
@@ -91,17 +95,23 @@ body{
     background: transparent;
 }
 
-.menu__list .list__item{
+.menu__list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.list__item{
     font-size: 24px;
-    display: inline-block;
-    margin: 0px 20px 0px 20px;
-    letter-spacing: 1px;
-    line-height: 70px;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
 }
 
 .menu__list .list__item a{
     display:block;
-    color: var(--color-bg);
+    color: var(--color-text-title);
     text-decoration: none;
     /* transición */
     transition: all 500ms;
@@ -137,14 +147,10 @@ body{
     display: block;
     width: 850px;
     font-family: "BebasNeue";
-    color: #FE2614;
-    font-size: 45px;
+    color: var(--color-text-title);
+    font-size: 50px;
     letter-spacing: 2px;
-    text-shadow: 
-        -2px -2px 0 var(--color-bg),
-         2px -2px 0 var(--color-bg),
-        -2px  2px 0 var(--color-bg),
-         2px  2px 0 var(--color-bg);
+    -webkit-text-stroke: 1px var(--color-primary);
     margin: 25px auto;
     text-align: center;
     /* animación */
@@ -177,6 +183,7 @@ body{
 .content__cards {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    margin-left: 50px;
 }
 
 .card__img{
@@ -190,14 +197,13 @@ body{
 .cards__card{
     width: 200px;
     height: 260px;
-    background-color: var(--color-nav);
-    border: 1px solid var(--color-backgroung);
-    box-shadow: 
-        0px 0px 10px var(--color-box-shadow2),
-        0px 0px 20px var(--color-box-shadow2),
-        0px 0px 30px var(--color-box-shadow2),
-        3px 3px 5px rgba(0, 0, 0, 0.2);
+    border: 5px solid var(--color-background);
+    border-radius: 50px;
+    background: #2F4552;
+    box-shadow: inset 20px 20px 60px #283b46,
+                inset -20px -20px 60px #364f5e;
     overflow: hidden;
+    padding: 2px;
     margin: 22px;
     margin-top: 40px;
     cursor: pointer;
@@ -207,7 +213,7 @@ body{
 
 /*efecto hover en las cartas */
 .cards__card:hover {
-    background-color: var(--color-nav);
+    background-color: var(--color-focus);
 }
 
 .cards__card:last-child {
@@ -221,14 +227,14 @@ body{
     font-size: 21px;
     font-weight: bold;
     text-align: center;
-    color: var(--color-bg);
+    color: var(--color-background);
     transition: all 500ms;
 }
 
 .card__description{
     font-family: "TrebuchetMS";
     text-align: center;
-    color: var(--color-bg);
+    color: var(--color-background);
     font-size: 14px;
     /* transición */
     transition: all 500ms;
@@ -271,20 +277,37 @@ body{
     }
 }
 
+.main__container {
+    display: grid;
+    grid-template-columns: 8fr 2fr;
+}
+
 /* Barra lateral */
 .content__lateral{
-    width: 300px;
+    width: 310px;
     min-height: 1070px;
     font-family: "TrebuchetMS";
-    float: right;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
     margin: 20px;
+    
 }
+
+.lateral__box{
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    background: var(--color-background2);
+    box-shadow: 0px 1px 0px var(--color-box-shadow2), 1px 2px 0px var(--color-box-shadow2), 2px 3px 0px var(--color-box-shadow2), 3px 4px 0px var(--color-box-shadow2);
+}
+
 .lateral__title{
     display: block;
     width: auto;
     height: 45px;
     line-height: 49px;
-    background: url("../img/pxvar(--color-gray).png"), var(--color-text-white);
+    color: var(--color-background);
+    background: linear-gradient(to bottom, var(--color-primary), var(--color-secondary) 50%, var(--color-text-title));
     box-shadow: 0px 1px 0px var(--color-box-shadow2), 1px 2px 0px var(--color-box-shadow2), 2px 3px 0px var(--color-box-shadow2), 3px 4px 0px var(--color-box-shadow2);
     font-size: 30px;
     font-family: "BebasNeue";
@@ -293,49 +316,20 @@ body{
     padding-left: 15px;
     margin-top: 30px;
     margin-bottom: 15px;
+    text-align: center;
 }
 
 .lateral__title:first-child{
     margin-top: 0px;
 }
-.lateral__search{
-    width: 90%;
-    height: 30px;
-    margin: 10px auto;
-    background-color: var(--color-text-white);
-    border: 1px solid var(--color-backgroung);
-    border-radius: 5px;
-    box-shadow: 1px 1px 4px var(--color-backgroung) inset;
+.lateral__music{
+    width: 200px;
+    height: auto;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding-bottom: 10px;
 }
 
-.lateral__search input[type="text"]{
-    width: 85%; /* para que quepa el botón */
-    height: 30px;
-    border: none;
-    padding-left: 5px;
-    border-radius: 5px;
-    background-color: transparent;
-    color: var(--color-backgroung);
-    /* transición para el focus */
-    transition: all 500ms;
-}
-/* obtengo foco en input[type="text"] */
-.lateral__search input[type="text"]:focus {
-    color: var(--color-primary);
-}
-
-
-.lateral__search input[type="button"],
-.lateral__search input[type="text"]{
-    height: 30px;
-    cursor:pointer;
-    font-size: 16px;
-    background-color: transparent; /* para que no tenga fondo */
-    border:none; /* para que se integre con el campo en sí */
-    border-left: 1px solid var(--color-backgroung);
-    color: var(--color-focus);
-    padding-left: 6px;
-}
 .aside-box{
     width: 85%;
     height: 240px;
@@ -362,7 +356,7 @@ body{
 .lateral__login input[type="email"]:focus,
 .lateral__login input[type="password"]:focus{
     color: var(--color-focus);
-    box-shadow: 1px 1px 1px var(--color-gray) inset;
+    box-shadow: 1px 1px 1px var(--color-grey) inset;
 }
 
 .lateral__login .lateral-box__user,
@@ -384,23 +378,19 @@ body{
 .lateral__login input[type="button"],
 .lateral__login input[type="reset"],
 .lateral__login button{
-    /* display: block; */
-    float: left;
     text-align: center;
     width: 100px;
     height: 35px;
     margin-top: 20px;
     color: var(--color-text-white);
-    /* Degradado desde abajo - to bottom --> hacia arriba */
-    background: linear-gradient(to bottom, #ee9494 0%, #af3d3d 100%);
-    border: 1px solid #791212;
+    background: var(--color-background);
+    border: 1px solid var(--color-box-shadow);
     border-radius: 0px;
     cursor: pointer;
     font-size: 15px;
     font-family: "TrebuchetMS";
     margin-left: 17px;
-    margin-bottom: 20px;
-    /* transición */ 
+    margin-bottom: 20px; 
 }
 
 .lateral__login a{
@@ -408,61 +398,91 @@ body{
     text-decoration: none;
     margin-left: 18px;
     font-size: 14px;
-    color: var(--color-focus);
+    color: var(--color-primary);
 }
 
-/* efecto en el .lateral__login a mediante hover */
-
-
-.lateral__social{
-    height: 220px;
+.lateral__sponsors {
+    position: relative;
+    width: 100%;
 }
 
-.lateral__social a{
-    display: block;
-    color: var(--color-bg);
-    text-decoration: none;
-    font-size: 30px;
-    margin-left: 20px;
-    margin-top: 10px;
-    margin-bottom: 20px;
+.carousel__container {
+    display: flex;
 }
 
-.lateral__social .social__overlay{
-    display: block;
-    height: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    letter-spacing: 1px;
-    text-shadow: 0px 0px 1px var(--color-backgroung);
-    border: 3px solid var(--color-text-white);
-    box-shadow: 0px 0px 4px var(--color-backgroung);
-    background: #F4F7FE;
-    position: absolute;
-    padding: 5px;
-    margin-left: 70px;
-    margin-top: -52px;
-    cursor: pointer;
-    transform: translateX(-80%); /*lo desplazo para que cuando se lance el hover se vea el movimiento de la traslación*/
-    opacity: 0; /*lo oculto*/
-    /* transición el cambio */
-    transition: all 500ms;
-
+.carousel__image {
+    width: 100%;
+    height: auto;
 }
-/* efecto hover sobre el div de lateral__social */
-.lateral__social div:hover .social__overlay { 
+
+.imagen__uno{
+    animation: carruselUno 20s infinite;
+    padding-bottom: 10px;
+}
+
+@keyframes carruselUno {
+    0% { 
+        opacity: 1;
+    } 25% {
+        opacity: 1;
+    } 48%{
+        opacity: 0;
+    } 49% {
+        opacity: 0;
+    } 50% {
+        opacity: 0;
+    } 75% {
+        opacity: 0;
+    } 100% {
+        opacity: 1;
+    }
+}
+
+.imagen__dos{
+    animation: carruselDos 20s infinite;
     opacity: 1;
-    transform: translateX(0%);
 }
 
+/* Animación para el carrusel */
+@keyframes carruselDos {
+    0% {
+        transform: translateX(-100%); 
+        opacity: 0; 
+    } 30% {
+        transform: translateX(-100%); 
+        opacity: 0;
+    } 50% {
+        transform: translateX(-100%); 
+        opacity: 1;
+    } 75% {
+        transform: translateX(-100%); 
+        opacity: 1;
+    } 98% {
+        transform: translateX(-100%); 
+        opacity: 0;
+    } 99% {
+        transform: translateX(-100%); 
+        opacity: 0;
+    } 100% { 
+        transform: translateX(-100%); 
+        opacity: 0;
+    }
+}
 
 /* Artículos */
 .content__articles{
-    display: grid;
     width: 860px;
+
 }
 
-.content__articles h2{
+.articles__box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    width: 100%;
+}
+
+.articles__title{
     display: block;
     width: 100%;
     height: 75px;
@@ -472,23 +492,28 @@ body{
     font-size: 40px;
     font-weight: normal;
     letter-spacing: 2px;
-    background: url("../img/pxvar(--color-gray).png"), var(--color-text-white);
+    background: linear-gradient(to bottom, var(--color-primary), var(--color-secondary) 50%, var(--color-text-title));
     box-shadow: 0px 1px 0px var(--color-box-shadow2), 1px 2px 0px var(--color-box-shadow2), 2px 3px 0px var(--color-box-shadow2), 3px 4px 0px var(--color-box-shadow2);
+    color: var(--color-background);
     margin: 0px auto;
     margin-top: 20px;
     margin-bottom: 15px;
 }
 
 .articles__article{
-    width: 98%;
+    width: 244px;
     height: auto;
-    border: 1px solid var(--color-backgroung);
+    border: 1px solid var(--color-background2);
     margin: 40px auto;
     padding: 10px;
     font-family: "TrebuchetMS";
-    background: var(--color-text-white);
+    background: var(--color-background);
     color: var(--color-bg);
     box-shadow: 1px 1px 2px var(--color-box-shadow);
+}
+
+.article__img{
+    padding-top: 30px;
 }
 
 .articles__article h4{
@@ -505,42 +530,50 @@ body{
 }
 
 .article__datos{
-    float: right;
+    width: 100%;
     background-color: var(--color-box-shadow2);
-    color: var(--color-text-white);
-    height: 30px;
-    line-height: 30px;
+    color: var(--color-text-title);
     margin: -10px;
     padding: 4px;
+    margin-left: 11px;
     font-size: 13px;
     border-radius: 0px 0px 0px 5px; /* esquina inferior izq 5px */
 }
 .article__datos span{
+    display: grid;
+    text-align:left;
+    align-content: center;
     margin: 6px;
 }
 
-.article__datos p{
-    margin-top: 10px;
-    margin-bottom: 10px;
-    font-size: 15px;
+.article__precio {
+    color: var(--color-text-title);
+    font-size: 13px;
+}
+
+.article__precio span{
+    display: grid;
+    text-align:left;
+    align-content: center;
+    margin: 6px;
 }
 
 /* FOOTER */
 .content__footer{
+    display: grid;
+    grid-template-rows: 8fr 2fr;
     width: 100%;
     height: 470px;
-    background-color: var(--color-nav);
+    background: linear-gradient(to bottom, var(--color-background) 0%, var(--color-nav) 80%);
     overflow: hidden;
 }
-.footer__wrap > div{
-    float: left;
-    width: 25%;
-    height: 370px;
-    margin: 40px;
-    text-align: center;
-    color: var(--color-text-white);
-    font-family: "TrebuchetMS";
+
+.footer__wrap {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }
+
+
 
 .content__footer a{
     text-decoration: none;
@@ -551,38 +584,26 @@ body{
 }
 .footer__title{
     display: block;
-    background: url("../img/pxvar(--color-gray).png"), var(--color-text-white);
     height: 50px;
     letter-spacing: 2px;
     text-align: center;
     font-family: "BebasNeue";
     font-size: 40px;
     line-height: 55px;
-    color: black;
+    color: var(--color-text-title);
     border-radius: 5px;
     margin-bottom: 15px;
+    margin-top: 5px;
 }
-.footer__list{
-    text-align: left;
-    margin: 20px;
-    font-size: 25px;
-}
-.footer__list li{
-    margin-top: 10px;
-    padding: 5px;
-    border-bottom: 1px solid var(--color-backgroung);
-}
-.footer__list li a{
-    display: block;
-    height: 40px;
-    /* transición */
-    transition: all 500ms;
-}
-/* efecto de hover sobre cada li */
-.footer__list li:hover a{
-    transform: translateX(15%);
-    color: var(--color-text-white);
-    scale: 1.1;
+
+.footer__list {
+    margin-top: 15px;
+    display: grid;
+    color: var(--color-text-title);
+    align-content: center;
+    text-align: center;
+    font-size: 18px;
+    row-gap: 10px;
 }
 
 
@@ -595,16 +616,19 @@ body{
     box-shadow: 0px 0px 5px var(--color-gray);
 }
 
-.content__footer img{
-    margin-bottom: 15px;
-}
-.footer__browsers img{
-    width: 45px;
+
+.footer__copy {
+    display: grid;
+    width: 100%;
+    height: 100px;
+    background-color: var(--color-footer);
+    border-top: 20px solid var(--color-box-shadow2);
 }
 
-/* Animaciones y Transiciones
-- Propiedad Animation
-- Keyframes
-- Transitions 
-
-Indico cada punto aplicado como efecto*/
+.footer__copy p {
+    display: grid;
+    align-items: center;
+    text-align: center;
+    font-size: 16px;
+    color: var(--color-background);
+}

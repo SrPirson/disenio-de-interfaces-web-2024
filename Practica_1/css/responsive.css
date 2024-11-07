@@ -1,39 +1,105 @@
-/* del 0 al 1245px aplico esto */
-@media (max-width: 1230px){ 
-
+@media (max-width: 1250px) { 
+    /* Ajustar el contenedor principal para menos ancho */
+    .header__wrap, .content__wrap, .footer__wrap {
+        width: 96%;
+    }
+    .main__container {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
 
-@media (max-width: 1079px){
-
-}
-@media (max-width: 969px){
- 
-}
-@media (max-width: 920px){
-
-}
-
-@media (max-width: 890px){
-
+@media (max-width: 1079px) {
+    /* Cambiar el tamaño de las fuentes y márgenes */
+    .list__item {
+        font-size: 20px;
+        padding-top: 20px;
+    }
+    .cards__card {
+        width: 180px;
+    }
 }
 
-@media (max-width: 799px){
- 
-}
-/* movemos ya el menú y cambiamos estructura */
-@media (max-width: 800px){
-
-}
-/* Visionado para Móviles */
-@media (max-width: 660px){
- 
-}
-@media (max-width: 550px){
-
+@media (max-width: 969px) {
+    /* Cambiar a dos columnas en .content__cards */
+    .content__cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
-@media (max-width: 470px){
- 
+@media (max-width: 920px) {
+    /* Ajustar encabezado y espaciado en el menú */
+    .header__menu {
+        height: 60px;
+    }
+    .list__item {
+        font-size: 18px;
+    }
 }
 
+@media (max-width: 890px) {
+    /* Ajustar tamaño de banner y tarjetas */
+    .content__banner {
+        height: 80px;
+    }
+    .cards__card {
+        width: 160px;
+    }
+}
 
+@media (max-width: 800px) {
+    /* Convertir el menú a vertical y ajustar encabezado */
+    .menu__list {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .content__cards {
+        grid-template-columns: 1fr;
+        margin-left: 0;
+    }
+    .header__wrap {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 799px) {
+    /* Más ajustes de ancho */
+    .header__logo {
+        width: 12%;
+    }
+    .content__banner h1 {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 660px) {
+    /* Ajustes para móviles */
+    .list__item {
+        font-size: 16px;
+    }
+    .header__menu {
+        height: 50px;
+    }
+    .content__articles {
+        width: 100%;
+    }
+}
+
+@media (max-width: 550px) {
+    /* Cambiar layout de aside y footer */
+    .main__container {
+        grid-template-columns: 1fr;
+    }
+    .footer__wrap {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 470px) {
+    /* Ajustar texto y estructura para móvil */
+    .footer__title {
+        font-size: 24px;
+    }
+    .articles__article h4 {
+        font-size: 18px;
+    }
+}
