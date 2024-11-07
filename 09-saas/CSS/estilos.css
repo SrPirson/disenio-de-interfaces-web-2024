@@ -1,0 +1,24 @@
+body {
+  background-color: #1d1d1d;
+  color: #f1f1f1;
+}
+
+h1 {
+  color: #f1f1f1;
+  background-color: #a1a1a1;
+  width: 400px;
+  height: 100px;
+}
+
+.caja {
+  border: 1px solid #a1a1a1;
+  margin: 0px auto;
+  text-align: center;
+  color: #f1f1f1;
+  background-color: #353535;
+  padding: 10px;
+}
+.caja h2 {
+  color: rgb(188, 89, 212);
+  font-size: 27px;
+}/*# sourceMappingURL=estilos.css.map */
