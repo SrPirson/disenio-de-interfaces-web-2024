@@ -60,7 +60,7 @@ body{
 .header__wrap, .content__wrap, .footer__wrap{
     /* le asignamo 1200 para vista de escritorio */
     width: var(--mx-width);
-    margin: 0px auto; /* centra un elemento */
+    margin: 0px auto;
 }
 
 .header__wrap {
@@ -68,7 +68,7 @@ body{
     grid-template-columns: repeat(2, 1fr);
 }
 
-.logo__gear, .card__icon, .aside-box__icon, .social__icon{
+.aside-box__icon{
     font-family: "WebSymbolsRegular";
 }
 
@@ -84,8 +84,8 @@ body{
     margin-bottom: 40px;
 }
 
-.header__logo{
-    width: 15.5%;
+.header__logo .logo__img{
+    width: 95px;
     margin-left: 25px;
     filter: drop-shadow(0 2px 4px var(--color-box-shadow2));
 }
@@ -155,7 +155,6 @@ body{
     text-align: center;
     /* animación */
     animation: muevoTexto 10s linear 1;
-    
 }
 
 /* keyframes */
@@ -295,8 +294,7 @@ body{
 
 .lateral__box{
     width: 100%;
-    height: auto;
-    margin-bottom: 20px;
+    height: 99%;
     background: var(--color-background2);
     box-shadow: 0px 1px 0px var(--color-box-shadow2), 1px 2px 0px var(--color-box-shadow2), 2px 3px 0px var(--color-box-shadow2), 3px 4px 0px var(--color-box-shadow2);
 }
@@ -322,12 +320,9 @@ body{
 .lateral__title:first-child{
     margin-top: 0px;
 }
-.lateral__music{
-    width: 200px;
-    height: auto;
-    margin-left: 5px;
-    margin-right: 5px;
-    padding-bottom: 10px;
+.lateral__music audio{
+    width: 90%;
+    padding-left: 30px;
 }
 
 .aside-box{
@@ -483,7 +478,8 @@ body{
 }
 
 .articles__title{
-    display: block;
+    display: grid;
+    grid-template-columns: 1fr;
     width: 100%;
     height: 75px;
     line-height: 75px; /* centra el texto */
@@ -572,8 +568,6 @@ body{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
-
-
 
 .content__footer a{
     text-decoration: none;
