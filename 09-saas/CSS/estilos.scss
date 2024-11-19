@@ -1,4 +1,4 @@
-// variables
+/* Variables */
 $b: "body";
 $color-fondo: #1d1d1d;
 $color-fondo2: #a1a1a1;
@@ -18,7 +18,8 @@ h1{
     
 }
 
-// Anidación
+
+/* Anidación */
 .caja {
     border: 1px solid $color-fondo2;
     margin: 0px auto;
@@ -28,7 +29,111 @@ h1{
     padding: 10px;
 
     h2 {
-        color: rgb(188, 89, 212);
+        color: violet;
         font-size: 27px;
+    }
+}
+
+
+/* Mixins - Funciones */
+@mixin crearBorder5-sombra(){ // @mixin para crear la función
+    border: 5px solid grey;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px pink;
+}
+
+.caja {
+    @include crearBorder5-sombra(); // @include añade toda la función en el css
+}
+
+// Funcion con parametros
+@mixin crearBorder5-sombraParam($color, $sizeB, $sixeS, $shawdow, $sizeBR){
+    border: $sizeB solid $color;
+    border-radius: $sizeBR;
+    box-shadow: 0px 0px $sizeB $shawdow;
+}
+
+.caja2 {
+    @include crearBorder5-sombraParam(palevioletred, 10px, 20px, violet, 20px);
+    text-align: center;
+    color: $color-letra;
+    padding: 10px;
+    
+    h2 {
+        color: violet;
+        font-size: 27px;
+    }
+}
+
+
+/* Herencia Sass */
+%alerta-normal {
+    @include crearBorder5-sombraParam(yellow, 5px, 10px, grey, 20px);
+    padding: 10px;
+    width: 75%;
+    margin: 20px auto;
+    text-align: center;
+    font-size: 18px;
+}
+
+.alerta {
+    @extend %alerta-normal; // @extend para heredar 
+}
+
+.alerta--peligro {
+    @extend %alerta-normal;
+    border: 5px solid red;
+}
+
+.alerta--exito {
+    @extend %alerta-normal;
+    border: 5px solid greenyellow;
+}
+
+
+/* Operadores */
+h4 {
+    font-size: 32px + 5px - 1px;
+}
+
+$caja: 200px;
+$wrap: 900px;
+
+.cajas {
+    width: $wrap;
+    border: 1px solid whitesmoke;
+    text-align: center;
+    border-radius: 50px;
+    margin: 10px auto;
+}
+
+.cajaOp {
+    float: left;
+    @include crearBorder5-sombra();
+    margin: 10px;
+    width: ($caja / $wrap) * 100%;
+    
+}
+
+
+/* Condicionales Sass - if */
+$color-fondo: black;
+h1 {
+    @if $color-fondo == #ccc {
+        color: black;
+    } @else if $color-fondo == black {
+        color: orangered;
+    } @else {
+        color: orange;
+    }
+}
+
+
+/* Bucles For - Each - While */
+$contador: 1;
+
+@for $contador from 1 through 9 {
+    .listadoMixin ul li:nth-child(#{$contador}) {
+        font-size: $contador * 5px;
     }
 }
