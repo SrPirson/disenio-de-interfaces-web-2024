@@ -19,6 +19,9 @@ $(document).ready(function(){
 
     function activar() {
         var text = $(this).text();
+        if (text.toUpperCase() == "BORRAR") {
+            text = "";
+        }
         $("#texto").val(text);
     };
 
