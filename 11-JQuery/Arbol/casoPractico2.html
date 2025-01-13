@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caso Practico 2</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" type="text/javascript"></script>
+
+    <style>
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 10px auto;
+  padding: 2rem;
+  width: 80%;
+}
+
+.container > div {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  height: 500px;
+
+  width: 30%;
+}
+.container div:nth-child(1),
+.container div:nth-child(3) {
+  border: 1px solid black;
+  border-radius: 1rem;
+  overflow-y: auto;
+  padding: 0.5rem;
+}
+
+.container div.botones {
+  justify-content: flex-end;
+}
+
+img {
+  height: 100px;
+  width: 100px;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="origen">
+            <img src="img/apple.jpeg">
+            <img src="img/banana.png">
+            <img src="img/bread.png">
+            <img src="img/brocoli.jpeg">
+            <img src="img/lemon.png">
+            <img src="img/milk.png">
+            <img src="img/onion.png">
+            <img src="img/potato.png">
+            <img src="img/tomato.png">
+            <img src="img/water_mellon.png">
+        </div>
+        <div class="botones">
+            <p><button id="echar">Echar a la cesta</button></p>
+            <p><button id="vaciar">Vaciar Cesta</button></p>
+        </div>
+        <div class="destino">
+            <h2>Su cesta:<span>0</span><i class="fa fa-shopping-basket"></i></h2>
+
+        </div>
+    <script src="./JS/casoPractico2.js"></script>
+</body>
+</html>

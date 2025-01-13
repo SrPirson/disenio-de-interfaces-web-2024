@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" type="text/javascript"></script>
+    <style>
+        .caja1{
+            width: 200px;
+            height: 200px;
+            margin: 15px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .caja2{
+            width: 200px;
+            height: 200px;
+            margin: 15px;
+            background-color: salmon;
+        }
+
+        #ejemplo {
+            width: 200px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            background-color: lightblue;
+            color: black;
+            margin: 20px auto;
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="caja1">
+        <p class="caja2" id="elemento"></p>
+    </div>
+    <div>
+        <button>Efecto 1</button>
+        <button>Efecto 2</button>
+    </div>
+
+    <p id="ejemplo">Hoooola</p>
+
+    <script src="./JS/ejemplo.js"></script>
+</body>
+</html>

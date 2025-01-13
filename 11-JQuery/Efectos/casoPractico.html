@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Caso Practico</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      type="text/javascript"
+    ></script>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      .container {
+        display: flex;
+        margin: 100px auto;
+        width: 80%;
+      }
+
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      table,
+      td,
+      th {
+        border: 1px solid black;
+      }
+
+      th {
+        background-color: rgba(77, 77, 77, 0.767);
+        color: white;
+      }
+
+      .data,
+      .graphics {
+        height: 400px;
+        width: 50%;
+      }
+
+      .data {
+        padding: 2rem;
+      }
+
+      .graphics {
+        display: flex;
+        align-items: flex-end;
+      }
+
+      .graphics > div > div {
+        height: 15px;
+        width: 20%;
+      }
+
+      .graphics > div {
+        align-items: flex-end;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        width: 25%;
+      }
+      .graphics .names {
+        border-top: 1px solid black;
+        padding-top: 10px;
+        text-align: center;
+        width: 100%;
+      }
+
+      .year-2008 {
+        background-color: blue;
+      }
+
+      .year-2009 {
+        background-color: red;
+      }
+
+      .year-2010 {
+        background-color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="data">
+        <table>
+          <caption>
+            Precipitaciones anuales
+          </caption>
+          <thead>
+            <tr>
+              <th>Ciudad</th>
+              <th>2008</th>
+              <th>2009</th>
+              <th>2010</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Sevilla</td>
+              <td>50</td>
+              <td>100</td>
+              <td>75</td>
+            </tr>
+            <tr>
+              <td>Bilbao</td>
+              <td>250</td>
+              <td>300</td>
+              <td>180</td>
+            </tr>
+            <tr>
+              <td>Coruña</td>
+              <td>400</td>
+              <td>420</td>
+              <td>325</td>
+            </tr>
+            <tr>
+              <td>Zaragoza</td>
+              <td>100</td>
+              <td>150</td>
+              <td>60</td>
+            </tr>
+          </tbody>
+        </table>
+        <p><button id="representar">Respresentar</button></p>
+      </div>
+      <div class="graphics">
+        <div>
+          <div class="year-2008"></div>
+          <div class="year-2009"></div>
+          <div class="year-2010"></div>
+          <div class="names">Sevilla</div>
+        </div>
+        <div>
+          <div class="year-2008"></div>
+          <div class="year-2009"></div>
+          <div class="year-2010"></div>
+          <div class="names">Bilbao</div>
+        </div>
+        <div>
+          <div class="year-2008"></div>
+          <div class="year-2009"></div>
+          <div class="year-2010"></div>
+          <div class="names">Coruña</div>
+        </div>
+        <div>
+          <div class="year-2008"></div>
+          <div class="year-2009"></div>
+          <div class="year-2010"></div>
+          <div class="names">Zaragoza</div>
+        </div>
+      </div>
+    </div>
+    <script src="./JS/casoPractico.js"></script>
+  </body>
+</html>

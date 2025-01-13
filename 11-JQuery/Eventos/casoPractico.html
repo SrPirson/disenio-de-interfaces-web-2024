@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Caso Practico</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      type="text/javascript"
+    ></script>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      /* Estilos para la calculadora */
+      #calculadora > div:nth-child(1) {
+        display: inline-block;
+        width: 50%;
+      }
+
+      /* Estilos para la tabla */
+      table {
+        border-collapse: collapse;
+      }
+
+      table,
+      td,
+      th {
+        border: 1px solid black;
+        padding: 0.5rem;
+      }
+
+      th {
+        background-color: green;
+        color: white;
+        font-weight: bolder;
+      }
+
+      .contains {
+        background-color: blue;
+        color: white;
+      }
+
+      .no-contains {
+        background-color: grey;
+        color: white;
+      }
+
+      /* Estilos para el cuadrado */
+      #square {
+        border: 1px solid black;
+        height: 300px;
+        margin: 20px auto;
+        position: relative;
+        width: 60%;
+      }
+
+      #square #hijo {
+        background-color: red;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 50px;
+        height: 50px;
+      }
+
+      /* Opciones del menú contentual */
+      section#contextMenu {
+        background-color: khaki;
+        border: 1px solid red;
+        border-radius: 1rem;
+        padding: 0.5rem;
+        position: fixed;
+        width: 10rem;
+      }
+
+      section#contextMenu div {
+        padding: 0.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <!--Calculadora-->
+    <section id="calculadora">
+      <div>
+        <p>
+          <label for="op1">Operador 1</label>
+          <input id="op1" type="number" placeholder="operador1" />
+        </p>
+        <p>
+          <label for="op2">Operador 2</label>
+          <input id="op2" type="number" placeholder="operador2" />
+        </p>
+        <button value="+">+</button>
+        <button value="-">-</button>
+        <button value="*">*</button>
+        <button value="/">/</button>
+      </div>
+      <div>
+        <h4>El resultado de la operación es:<span></span></h4>
+      </div>
+    </section>
+
+    <!-- Tabla para buscar nombre -->
+    <section id="table">
+      <p>
+        <label for="nombre">Nombre</label>
+        <input id="nombre" type="text" placeholder="nombre_a_buscar" />
+      </p>
+      <table>
+        <thead>
+          <tr>
+            <th>Alumno</th>
+            <th>Examen 1</th>
+            <th>Examen 2</th>
+            <th>Examen 3</th>
+            <th>Nota evaluación</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Pepe Pérez</td>
+            <td>5</td>
+            <td>4</td>
+            <td>3</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Ana Ramírez</td>
+            <td>6</td>
+            <td>3</td>
+            <td>5</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Rosa Torres</td>
+            <td>9</td>
+            <td>3</td>
+            <td>9</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Sara Gallardo</td>
+            <td>8</td>
+            <td>8</td>
+            <td>6</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Cuadrado que se mueve-->
+    <section id="square">
+      <div id="hijo"></div>
+    </section>
+
+    <section id="contextMenu">
+      <div>Opción1</div>
+      <div>Opción2</div>
+      <div>Opción3</div>
+      <div>Opción4</div>
+    </section>
+    <script src="./JS/casoPractico.js"></script>
+  </body>
+</html>
