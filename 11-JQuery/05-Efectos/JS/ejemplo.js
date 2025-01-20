@@ -9,6 +9,8 @@ $(function() {
     });
 
     $("button:contains('2')").click(function (event) {
+        $("#elemento").stop();
+        $("#elemento").clearQueue();
         $("#elemento").fadeToggle();
     });
 

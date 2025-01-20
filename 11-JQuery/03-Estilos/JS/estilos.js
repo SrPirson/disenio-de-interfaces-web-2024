@@ -110,7 +110,7 @@ $(function() {
     $("ul.lista").append("<li>FINAL</li>");
 
     // Otra forma de hacer lo mismo
-    $("<li>FINAL2</li>").appendTo("ul.lista")
+    $("<li>FINAL2</li>").appendTo("ul.lista");
 
     // Envolver un elemento dentro de la etiqueta que indiquemos
     $("ul.lista").wrap("<section></section>");
