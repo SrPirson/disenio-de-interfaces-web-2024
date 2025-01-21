@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Company Name</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootswatch@5.1.0/lumen/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body style="font-family: Outfit, Verdana, Geneva, Tahoma, sans-serif">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"
+          ><img src="./img/icononavbar.png " /> Company Name</a
+        >
+        <button
+          class="navbar-toggler sticky-top"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Contacto">Contacto</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Secciones
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#Team">Equipo</a></li>
+                <li><a class="dropdown-item" href="#Productos">Producto</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+      <div
+        id="carouselExampleDark"
+        class="carousel carousel-dark slide"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleDark"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleDark"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleDark"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleDark"
+            data-bs-slide-to="3"
+            aria-label="Slide 4"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="10000">
+            <img src="/img/slider1.jpg" class="d-block w-100" alt="..." />
+            <div class="carousel-caption d-none d-md-block bg-light">
+              <h5>Servicio 1</h5>
+              <p>Texto del servicio 1.</p>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img src="/img/slider2.jpg" class="d-block w-100" alt="..." />
+            <div class="carousel-caption d-none d-md-block bg-light">
+              <h5>Servicio 2</h5>
+              <p>Texto del servicio 2 que es más largo.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="img/slider3.jpg" class="d-block w-100" alt="..." />
+            <div class="carousel-caption d-none d-md-block bg-light">
+              <h5>Servicio 3</h5>
+              <p>Texto del servicio 3.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="img/slider4.jpg" class="d-block w-100" alt="..." />
+            <div class="carousel-caption d-none d-md-block bg-light">
+              <h5>Servicio 4</h5>
+              <p>
+                Este servicio es especial y ocupa varias lineas de texto en el
+                slider.<br />Segunda línea
+              </p>
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleDark"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleDark"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    
+    <div class="container-fluid bg-secondary p-5">
+      <div class="container">
+        <div class="row justify-content-between">
+          <h1 class="col-12 text-center text-light" id="Team">EQUIPO</h1>
+          <div class="col-sm-12 col-lg-3">
+            <div class="card">
+              <div class="card-body text-center">
+                <img src="img/equipo1.jpg" class="rounded-top" />
+                <h5 class="card-title">Roberto</h5>
+                <p class="card-text">Desarrollador Front-end.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-lg-3">
+            <div class="card">
+              <div class="card-body text-center">
+                <img src="img/equipo2.jpg" class="rounded-top" />
+                <h5 class="card-title">Cristina</h5>
+                <p class="card-text">Diseñadora.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-lg-3">
+            <div class="card">
+              <div class="card-body text-center">
+                <img src="img/equipo3.jpg" class="rounded-top" />
+                <h5 class="card-title">Sebastián</h5>
+                <p class="card-text">Desarrollador Backend.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-lg-3">
+            <div class="card">
+              <div class="card-body text-center">
+                <img src="img/equipo4.jpg" class="rounded-top" />
+                <h5 class="card-title">Alicia</h5>
+                <p class="card-text">Marketing Digital.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container p-5">
+      <div class="row align-items-center text-center">
+        <div class="col-12 order-2 col-md-9 order-md-1">
+          <h1 id="Productos" class="text-center">PRODUCTOS</h1>
+          <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button
+                  class="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne"
+                  aria-expanded="true"
+                  aria-controls="collapseOne"
+                >
+                  Producto #1
+                </button>
+              </h2>
+              <div
+                id="collapseOne"
+                class="accordion-collapse collapse show"
+                aria-labelledby="headingOne"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  <strong>This is the first item's accordion body.</strong> It
+                  is shown by default, until the collapse plugin adds the
+                  appropriate classes that we use to style each element. These
+                  classes control the overall appearance, as well as the showing
+                  and hiding via CSS transitions. You can modify any of this
+                  with custom CSS or overriding our default variables. It's also
+                  worth noting that just about any HTML can go within the
+                  <code>.accordion-body</code>, though the transition does limit
+                  overflow.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo"
+                  aria-expanded="false"
+                  aria-controls="collapseTwo"
+                >
+                  Producto #2
+                </button>
+              </h2>
+              <div
+                id="collapseTwo"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingTwo"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  <strong>This is the second item's accordion body.</strong> It
+                  is hidden by default, until the collapse plugin adds the
+                  appropriate classes that we use to style each element. These
+                  classes control the overall appearance, as well as the showing
+                  and hiding via CSS transitions. You can modify any of this
+                  with custom CSS or overriding our default variables. It's also
+                  worth noting that just about any HTML can go within the
+                  <code>.accordion-body</code>, though the transition does limit
+                  overflow.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseThree"
+                  aria-expanded="false"
+                  aria-controls="collapseThree"
+                >
+                  Producto #3
+                </button>
+              </h2>
+              <div
+                id="collapseThree"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingThree"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  <strong>This is the third item's accordion body.</strong> It
+                  is hidden by default, until the collapse plugin adds the
+                  appropriate classes that we use to style each element. These
+                  classes control the overall appearance, as well as the showing
+                  and hiding via CSS transitions. You can modify any of this
+                  with custom CSS or overriding our default variables. It's also
+                  worth noting that just about any HTML can go within the
+                  <code>.accordion-body</code>, though the transition does limit
+                  overflow.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 order-1 text-center col-md-3 order-md-2">
+          <img src="img/Seccion.jpg" class="rounded-circle" />
+        </div>
+      </div>
+    </div>
+    <div
+      class="p-5"
+      style="
+        background-image: url(img/contacto.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+      "
+    >
+      <div class="container w-50 mt-3">
+        <h1 id="Contacto" class="text-light">CONTACTO</h1>
+        <form>
+          <div class="mb-3">
+            <label for="name" class="form-label text-light">Name</label>
+            <input type="text" class="form-control" id="name" name="name" />
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label text-light">Email</label>
+            <input type="email" class="form-control" id="email" name="email" />
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label text-light">Message</label>
+            <textarea
+              class="form-control"
+              id="message"
+              name="message"
+              rows="3"
+            ></textarea>
+          </div>
+          <button type="submit" class="btn btn-secondary">Submit</button>
+        </form>
+      </div>
+    </div>
+
+    <footer class="bg-dark text-light text-center p-3 mt-3">
+      &copy; 2024 Company Name
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
