@@ -1,33 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import React,{useRef} from 'react'; // libreria para hacer referencias a elementos del DOM
 
 function App() {
-  function mifuncion(){
-    alert("Hola Mundo");
-  }
+  const contador = useRef(); // declaramos la referencia del div contador
+
+  const iterar = (e) => {
+    e.target.innerHTML = parseInt(e.target.innerHTML) + 1;
+  };
+
+  const reiniciar = () => {
+    contador.current.innerHTML = 1; // accedemos al div contador con la referencia y le asignamos el valor 1
+  };
+
+  const cambiar = () => {
+    alert("hola");
+  };
   
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Hola <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <br/>
-        <button id="boton" onClick={mifuncion}>
-          Boton
-        </button>
-
-      </header>
-    </div>
+    <>
+      <div ref={contador} onClick={iterar}>1</div>
+      <button onClick={reiniciar}>Reiniciar</button>
+      <input type="number" onChange={cambiar}/>
+    </>
   );
 }
 
