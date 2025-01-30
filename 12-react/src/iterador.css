@@ -1,0 +1,8 @@
+.contador {
+    font-size: 2em;
+    border: solid 2px pink;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    text-align: center;
+}  
