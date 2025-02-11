@@ -5,6 +5,8 @@ import Iterador from './iterador'; // importamos el componente iterador
 function App() {
   const [numero, setNumero] = useState(); // declaramos el estado numero
   const resultado = useRef();
+
+  // Calculadora
   const [primerCampo, setPrimerCampo] = useState("");
   const [segundoCampo, setSegundoCampo] = useState("");
 
@@ -12,14 +14,16 @@ function App() {
     setNumero(e.target.value); // asignamos el valor del select al estado numero
   }
 
+  // Asignamos los números a los campos
   const modificar1 = (e) => {
-    setPrimerCampo = e.target.value;
+    setPrimerCampo(e.target.value);
   }
 
   const modificar2 = (e) => {
-    setSegundoCampo = e.target.value;
+    setSegundoCampo(e.target.value);
   }
 
+  // Sumamos los números
   const sumar = () => {
     resultado.current.value = parseInt(primerCampo) + parseInt(segundoCampo);
   }
@@ -37,10 +41,12 @@ function App() {
       </select>
       <p>La opción seleccionada es: {numero}</p>
 
-
+      <br/><br/>
+      <h2>Calculadora</h2>
+      
       <input type="number" value={primerCampo} onChange={modificar1} /><span> + </span>
       <input type="number" value={segundoCampo} onChange={modificar2} /><span> = </span>
-      <input ref={resultado} readOnly />
+      <input ref={resultado} readOnly /><span> </span>
       <button onClick={sumar}>Sumar</button>
     </div>
     
