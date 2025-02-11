@@ -1,0 +1,17 @@
+import React from 'react';
+import LineaPuntuacion from './LineaPuntuacion';
+import Mensaje from './Mensaje';
+
+export default function Puntuacion() {
+  return (
+    <div>
+        <div className="score-section">
+            <br/>
+            <Mensaje />
+            <br />
+            <LineaPuntuacion etiqueta="Puntuacion:" id="score" numero="20" />
+            <LineaPuntuacion etiqueta="Puntaje Alto:" id="highscore" numero="0" />
+        </div>
+    </div>
+  )
+}

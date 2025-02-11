@@ -4,7 +4,7 @@ import Iterador from './iterador'; // importamos el componente iterador
 
 function App() {
   const [numero, setNumero] = useState(); // declaramos el estado numero
-  const resultado = useRef();
+  const resultado = useRef(); // declaramos la referencia de un campo de texto
 
   // Calculadora
   const [primerCampo, setPrimerCampo] = useState("");
