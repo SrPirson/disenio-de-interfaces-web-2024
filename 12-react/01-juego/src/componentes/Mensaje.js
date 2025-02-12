@@ -1,9 +1,7 @@
-import React from 'react'
+import React from 'react';
 
-export default function Mensaje() {
+export default function Mensaje({ mensaje }) {
   return (
-    <div>
-      <p>Empiece a adivinar...</p>
-    </div>
-  )
+    <p>{mensaje}</p>
+  );
 }
