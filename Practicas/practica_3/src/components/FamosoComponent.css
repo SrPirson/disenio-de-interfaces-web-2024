@@ -1,0 +1,22 @@
+.contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+
+    .famoso {
+        width: 300px;
+        margin: 10px;
+        padding: 10px;
+
+        .name {
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+        }
+    }
+
+    .esconder {
+        display: none;
+    }
+}
