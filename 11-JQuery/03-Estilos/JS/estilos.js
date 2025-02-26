@@ -59,7 +59,7 @@ $(function() {
 
     // Atributos y propiedades.
     // Atributos nos dan información adicional sobre un elemento HTML. (Tiene que estar en el HTML)
-    // Propiedades son información de la instancion concreta de esas etiuetas dentro del DOM. (No tiene porque estar en el HTML)
+    // Propiedades son información de la instancion concreta de esas etiquetas dentro del DOM. (No tiene porque estar en el HTML)
 
     // Obtener el atributo de un elemento.
     console.log($("img").attr("src"));
